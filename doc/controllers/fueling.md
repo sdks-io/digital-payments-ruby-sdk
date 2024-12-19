@@ -96,14 +96,12 @@ body = PrepareFuelingRequest.new(
   '9955',
   '1',
   'PARTNER_APP_EXAMPLE',
-  [
-    PaymentDetailsItems.new(
-      'euroShell',
-      PaymentProperties.new(
-        '98e4ffd3-4146-4e94-8445-e02f4ce87a77'
-      )
+  PaymentDetails.new(
+    'euroShell',
+    PaymentProperties.new(
+      '98e4ffd3-4146-4e94-8445-e02f4ce87a77'
     )
-  ],
+  ),
   nil,
   [
     LoyaltyDetails.new(

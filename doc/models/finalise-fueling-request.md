@@ -19,8 +19,8 @@
 | `site_address` | `String` | Optional | - |
 | `original_price` | `Float` | Optional | - |
 | `discount` | `Float` | Optional | - |
-| `payment` | [`FinaliseFuelingRequestPayment`](../../doc/models/finalise-fueling-request-payment.md) | Optional | - |
-| `products` | [`Array<FinaliseFuelingRequestProductsItems>`](../../doc/models/finalise-fueling-request-products-items.md) | Optional | - |
+| `payment` | [`Payment`](../../doc/models/payment.md) | Optional | - |
+| `products` | [`Array<Product>`](../../doc/models/product.md) | Optional | - |
 | `mpp_transaction_id` | `String` | Optional | - |
 
 ## Example (as JSON)

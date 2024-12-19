@@ -5,6 +5,7 @@ The following parameters are configurable for the API Client:
 
 | Parameter | Type | Description |
 |  --- | --- | --- |
+| `environment` | `Environment` | The API environment. <br> **Default: `Environment.TEST`** |
 | `connection` | `Faraday::Connection` | The Faraday connection object passed by the SDK user for making requests |
 | `adapter` | `Faraday::Adapter` | The Faraday adapter object passed by the SDK user for performing http requests |
 | `timeout` | `Float` | The value to use for connection timeout. <br> **Default: 60** |
@@ -14,23 +15,24 @@ The following parameters are configurable for the API Client:
 | `retry_statuses` | `Array` | A list of HTTP statuses to retry. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array` | A list of HTTP methods to retry. <br> **Default: %i[get put]** |
 | `http_callback` | `HttpCallBack` | The Http CallBack allows defining callables for pre and post API calls. |
-| `mpp_token_credentials` | [`MppTokenCredentials`]($a/custom-header-signature.md) | The credential object for Custom Header Signature |
-| `o_auth_token_post_credentials` | [`OAuthTokenPostCredentials`]($a/custom-header-signature-1.md) | The credential object for Custom Header Signature |
+| `mpp_token_credentials` | [`MppTokenCredentials`](auth/custom-header-signature.md) | The credential object for Custom Header Signature |
+| `o_auth_token_post_credentials` | [`OAuthTokenPostCredentials`](auth/custom-header-signature-1.md) | The credential object for Custom Header Signature |
 
 The API client can be initialized as follows:
 
 ```ruby
-client = ShellEv::Client.new(
+client = ShellSmartPayApi::Client.new(
   mpp_token_credentials: MppTokenCredentials.new(
     authorization: 'Authorization'
   ),
   o_auth_token_post_credentials: OAuthTokenPostCredentials.new(
     x_apigee_authorization: 'X-Apigee-Authorization'
-  )
+  ),
+  environment: Environment::TEST
 )
 ```
 
-## Shell EV Client
+## Shell SmartPay API Client
 
 The gateway for the SDK. This class acts as a factory for the Controllers and also holds the configuration of the SDK.
 

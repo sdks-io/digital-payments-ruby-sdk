@@ -9,7 +9,7 @@ Documentation for accessing and setting credentials for oAuthTokenPost.
 
 | Name | Type | Description | Getter |
 |  --- | --- | --- | --- |
-| X-Apigee-Authorization | `String` | APIGEE access token ([How to obtain APIGEE access token?](page:guided-walkthrough/walkthrough1)) | `x_apigee_authorization` |
+| X-Apigee-Authorization | `String` | API Gateway Access token to be passed for Authentiction. The calling party’s OAuth 2.0/bearer token that’s required for using the Shell API Platform. ([How to obtain APIGEE access token?](page:guided-walkthrough/walkthrough1)) | `x_apigee_authorization` |
 
 
 
@@ -22,7 +22,7 @@ Documentation for accessing and setting credentials for oAuthTokenPost.
 You must provide credentials in the client as shown in the following code snippet.
 
 ```ruby
-client = ShellEv::Client.new(
+client = ShellSmartPayApi::Client.new(
   o_auth_token_post_credentials: OAuthTokenPostCredentials.new(
     x_apigee_authorization: 'X-Apigee-Authorization'
   )

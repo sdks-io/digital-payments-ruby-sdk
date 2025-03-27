@@ -29,6 +29,16 @@ module ShellSmartPayApi
     # @param [Array[String]] countries Optional parameter: This enables
     # requestor to filter locations based on one or more Countries (i.e. by
     # country codes).
+    # @param [TypeEnum] type Optional parameter: All fuel stations are of at
+    # least one Type, indicating whether it is Shell-branded or not, and if the
+    # station can be used by trucks. Note that a station can have more than one
+    # Type (e.g. Shell retail sites (Type=0) can also be truck friendly
+    # (Type=2)).   Type values are as follows:    * 0 = Shell owned/branded
+    # stations that are not also Type=2 or Type=3   * 1 = Partner stations
+    # accepting Shell Card   * 2 = Shell owned/branded stations that are truck
+    # friendly but not Type=3   * 3 = Shell owned/branded stations that are
+    # truck only   <br/>**When type is not provided, API will return type 0 and
+    # 2 only.**
     # @return [AroundLocationArray] response from the API call.
     def stationlocator_v1_stations_get_around_location(m,
                                                        lon,
@@ -37,7 +47,8 @@ module ShellSmartPayApi
                                                        offer_code: nil,
                                                        n: nil,
                                                        amenities: nil,
-                                                       countries: nil)
+                                                       countries: nil,
+                                                       type: nil)
       new_api_call_builder
         .request(new_request_builder(HttpMethodEnum::GET,
                                      '/SiteData/v1/stations',
@@ -50,6 +61,7 @@ module ShellSmartPayApi
                    .query_param(new_parameter(n, key: 'n'))
                    .query_param(new_parameter(amenities, key: 'amenities'))
                    .query_param(new_parameter(countries, key: 'countries'))
+                   .query_param(new_parameter(type, key: 'type'))
                    .header_param(new_parameter('application/json', key: 'accept'))
                    .auth(Single.new('oAuthTokenPost')))
         .response(new_response_handler

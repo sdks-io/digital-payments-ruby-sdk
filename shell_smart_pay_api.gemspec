@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'digital-payments-sdk'
-  s.version = '1.1.0'
+  s.version = '1.2.0'
   s.summary = 'SDK for using Shell Digital Payments APIs'
   s.description = 'The APIs detailed within this SDK will enable Shell\'s Fleet Solutions Customers to digitalize Shell Card/s and use them to pay to refuel their vehicles at Shell Stations.'
   s.authors = ['developer sdksio']

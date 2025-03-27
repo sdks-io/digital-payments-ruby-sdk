@@ -10,16 +10,16 @@ The APIs detailed within this document will enable Shell's Fleet Solutions Custo
 Install the gem from the command line:
 
 ```bash
-gem install digital-payments-sdk -v 1.1.0
+gem install digital-payments-sdk -v 1.2.0
 ```
 
 Or add the gem to your Gemfile and run `bundle`:
 
 ```ruby
-gem 'digital-payments-sdk', '1.1.0'
+gem 'digital-payments-sdk', '1.2.0'
 ```
 
-For additional gem details, see the [RubyGems page for the digital-payments-sdk gem](https://rubygems.org/gems/digital-payments-sdk/versions/1.1.0).
+For additional gem details, see the [RubyGems page for the digital-payments-sdk gem](https://rubygems.org/gems/digital-payments-sdk/versions/1.2.0).
 
 ## Test the SDK
 
@@ -31,7 +31,7 @@ rake
 
 ## Initialize the API Client
 
-**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/client.md)
+**_Note:_** Documentation for the client can be found [here.](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/client.md)
 
 The following parameters are configurable for the API Client:
 
@@ -47,8 +47,8 @@ The following parameters are configurable for the API Client:
 | `retry_statuses` | `Array` | A list of HTTP statuses to retry. <br> **Default: [408, 413, 429, 500, 502, 503, 504, 521, 522, 524]** |
 | `retry_methods` | `Array` | A list of HTTP methods to retry. <br> **Default: %i[get put]** |
 | `http_callback` | `HttpCallBack` | The Http CallBack allows defining callables for pre and post API calls. |
-| `mpp_token_credentials` | [`MppTokenCredentials`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
-| `o_auth_token_post_credentials` | [`OAuthTokenPostCredentials`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/auth/custom-header-signature-1.md) | The credential object for Custom Header Signature |
+| `mpp_token_credentials` | [`MppTokenCredentials`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/auth/custom-header-signature.md) | The credential object for Custom Header Signature |
+| `o_auth_token_post_credentials` | [`OAuthTokenPostCredentials`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/auth/custom-header-signature-1.md) | The credential object for Custom Header Signature |
 
 The API client can be initialized as follows:
 
@@ -79,20 +79,20 @@ The SDK can be configured to use a different environment for making API calls. A
 
 This API uses the following authentication schemes.
 
-* [`MppToken (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/auth/custom-header-signature.md)
-* [`oAuthTokenPost (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/auth/custom-header-signature-1.md)
+* [`MppToken (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/auth/custom-header-signature.md)
+* [`oAuthTokenPost (Custom Header Signature)`](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/auth/custom-header-signature-1.md)
 
 ## List of APIs
 
-* [Shell API Platform Security Authentication](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/controllers/shell-api-platform-security-authentication.md)
-* [Digital Payment Enablement](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/controllers/digital-payment-enablement.md)
-* [Station Locator](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/controllers/station-locator.md)
-* [Partner Notification](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/controllers/partner-notification.md)
-* [Fueling](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/controllers/fueling.md)
+* [Shell API Platform Security Authentication](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/controllers/shell-api-platform-security-authentication.md)
+* [Digital Payment Enablement](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/controllers/digital-payment-enablement.md)
+* [Station Locator](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/controllers/station-locator.md)
+* [Partner Notification](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/controllers/partner-notification.md)
+* [Fueling](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/controllers/fueling.md)
 
 ## Classes Documentation
 
-* [Utility Classes](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/utility-classes.md)
-* [HttpResponse](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/http-response.md)
-* [HttpRequest](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.1.0/doc/http-request.md)
+* [Utility Classes](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/utility-classes.md)
+* [HttpResponse](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/http-response.md)
+* [HttpRequest](https://www.github.com/sdks-io/digital-payments-ruby-sdk/tree/1.2.0/doc/http-request.md)
 

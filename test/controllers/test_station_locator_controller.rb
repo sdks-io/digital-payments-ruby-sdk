@@ -24,11 +24,12 @@ class StationLocatorControllerTests < ControllerTestBase
     n = nil
     amenities = nil
     countries = nil
+    type = nil
 
     # Perform the API call through the SDK function
     result = @controller.stationlocator_v1_stations_get_around_location(
       m, lon, lat, radius, offer_code: offer_code, n: n, amenities: amenities,
-      countries: countries
+      countries: countries, type: type
     )
 
     # Test response code

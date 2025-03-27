@@ -54,6 +54,7 @@ require_relative 'shell_smart_pay_api/models/loc'
 require_relative 'shell_smart_pay_api/models/opening_hour'
 require_relative 'shell_smart_pay_api/models/payment'
 require_relative 'shell_smart_pay_api/models/product'
+require_relative 'shell_smart_pay_api/models/type_enum'
 
 # Exceptions
 require_relative 'shell_smart_pay_api/exceptions/api_exception'
